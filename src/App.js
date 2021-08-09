@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,12 +7,12 @@ import {
 import '../src/app.scss';
 import '../src/querys.scss';
 import Header from '../src/components/Header';
-import TabFloat from '../src/components/TabFloat';
 import DataInitial from '../src/helpers/DataInitial';
 import { FavoriteContact } from './containers/FavoriteContainer';
-/* const Home = lazy(() => import('../src/components/Home')); */
-const Staff = lazy(() => import('../src/components/Staff'));
-const Compañeros = lazy(() => import('../src/components/Compañeros'));
+import { FavoriteFloat } from './containers/FavoriteContainer';
+import { FavoriteStaff } from './containers/FavoriteContainer';
+import { FavoriteCompañeros } from './containers/FavoriteContainer';
+import { saveContact } from './helpers/petitions';
 
 function App({ students, staff, compañeros }) {
   const [ModalAdd, setModalAdd] = useState(false);
@@ -35,17 +35,7 @@ function App({ students, staff, compañeros }) {
   }
 
   const handleSaveContact = (info) => {
-    fetch("http://localhost:3004/amigos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(info)
-    })
-      .then(res => res.json())
-      .then(result => {
-        console.log(result, 'result');
-      });
+    saveContact(info);
   }
 
   return (
@@ -56,25 +46,37 @@ function App({ students, staff, compañeros }) {
           <div className="card-container">
             <Switch>
               <Route exact path="/">
-                <Suspense fallback={<div>Loading...</div>}>
-                  {/* <Home handleSaveContact={handleSaveContact} handleClose={handleClose} modal={ModalAdd} students={students} /> */}
-                  <FavoriteContact handleSaveContact={handleSaveContact} handleClose={handleClose} modal={ModalAdd} students={students} />
-                </Suspense>
+                <FavoriteContact
+                  handleSaveContact={handleSaveContact}
+                  handleClose={handleClose}
+                  modal={ModalAdd}
+                  students={students}
+                />
               </Route>
               <Route exact path="/staff">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <Staff students={staff} />
-                </Suspense>
+                <FavoriteStaff
+                  handleSaveContact={handleSaveContact}
+                  handleClose={handleClose}
+                  modal={ModalAdd}
+                  students={staff}
+                />
               </Route>
               <Route exact path="/compañeros">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <Compañeros students={compañeros} />
-                </Suspense>
+                <FavoriteCompañeros
+                  handleSaveContact={handleSaveContact}
+                  handleClose={handleClose}
+                  modal={ModalAdd}
+                  students={compañeros}
+                />
               </Route>
             </Switch>
           </div>
         </section>
-        <TabFloat fav={ModalFav} handleClose={handleClose} handleClick={handleClick} />
+        <FavoriteFloat
+          fav={ModalFav}
+          handleClose={handleClose}
+          handleClick={handleClick}
+        />
       </div>
     </Router>
   );

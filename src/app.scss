@@ -1,0 +1,256 @@
+.App {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 97%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+body {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.image-container {
+    background: white;
+    height: 48%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    color: #fff;
+  }
+}
+
+.wrapper-btn {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  span {
+    display: inline-block;
+  }
+.btn-container {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  div {
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    width: 130px;
+    margin: 6px 2px;
+    border: 3px solid #8f51ed;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+}
+.fav-container {
+    width: 90%;
+    height: 33%;
+    background-color: #8f51ed;
+    position: absolute;
+    bottom: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    display: none;
+}
+.appear-fav {
+    display: block;
+}
+.float-container {
+  width: 90%;
+  height: 6%;
+  z-index: 80;
+  background-color: #8f51ed;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  color: white;
+  box-shadow: 3px 1px 4px #403c3c;
+  div.tab {
+    border-right: 1px solid #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &:last-of-type {
+      border-right: none;
+    }
+    span {
+      margin-right: 8px;
+    }
+  }
+
+}
+
+.card-container {
+    height: 420px;
+    display: flex;
+    margin: 6px 3px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  .card {
+    color: #000;
+    flex: 1 1 107px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 5px;
+    height:200px;
+    .img-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+      }
+    }
+    .content-card {
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      span{
+        display: block;
+        text-align: center;
+      }
+      .container-info{
+        background-color: rgb(247, 247, 248);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div {
+          margin: 5px;
+        }
+        .icon-initial {
+          color: #969595;
+        }
+        .icon {
+          color:#000;
+        }
+      }
+      .first .info {
+        display: none;
+      }
+    }
+  }
+}
+
+.modal {
+  background: #c3c0c0;
+  position: absolute;
+  display: none;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top:0;
+  form {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    .container-input{
+        width: 79%;
+        display: flex;
+        flex-direction: column;
+        color:#4e4d4d;
+      .first {
+          display: flex;
+          flex-direction: column;
+      }
+      .second {
+      display: flex;
+          flex-direction: column;
+      }
+    }
+    .btn {
+      width: 150px;
+      background-color: #8f51ed;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+      color: #fff;
+     }
+    .container-title {
+      display: flex;
+      justify-content: space-between;
+      width: 78%;
+      height: auto;
+      align-items: center;
+    }
+    div {
+      label {
+        margin: 5px 0 5px 0;
+      }
+      .input {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.appear {
+  display: block;
+}
+
+.Gryffindor {
+  background-color: #e07d0b;
+}
+
+.Slytherin {
+  background-color: #2ab625;
+}
+
+.Hufflepuff {
+  background-color: red;
+}
+
+.Ravenclaw {
+  background-color: royalblue;
+}
+
+.Ravenclaw {
+  background-color:#2bbdf5;
+}

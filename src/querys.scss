@@ -1,0 +1,133 @@
+@media (min-width: 769px){
+  body {
+    font-size: 16px;
+  }
+.fav-container {
+    bottom: initial;
+    top: 0;
+    width: 400px;
+    right: 50px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: initial;
+    border-top-left-radius: initial;
+    position: absolute;
+    padding-top: 35px;
+    background: #8f51ed;
+    height: inherit;
+    ul {
+      list-style: none;
+    }
+  }
+  .float-container {
+    top: 0;
+    z-index: 80;
+    width: 400px;
+    right: 50px;
+    bottom: initial;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: initial;
+    border-top-left-radius: initial;
+}
+  .wrapper-btn .btn-container{
+      width: 50%;
+  }
+  .card-container {
+    width: 90%;
+    height: 490px;
+    .card {
+      height: 230px;
+      flex: 1 1 600px;
+      flex-direction: row;
+      .content-card {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      div {
+        padding-left: 13px;
+        span {
+          display: inline-block;
+          text-align: center;
+          margin: 2px;
+        }
+      }
+      .first{
+        span {
+          font-size: 2rem;
+        }
+      .info{
+        display: block;
+        }
+      }
+    }
+    .img-container {
+        height: inherit;
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+  }
+.modal form {
+    width: 40%;
+    height: auto;
+    margin:25px auto;
+    padding: 8px;
+    .container-input {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      align-items: baseline;
+      justify-content: center;
+      .first {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-right: 23px;
+      }
+      .second {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .btn {
+      width: 150px;
+      background-color: #8f51ed;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+      color: #fff;
+     }
+    .container-title {
+      display: flex;
+      justify-content: space-between;
+      width: 74%;
+      height: auto;
+      align-items: center;
+    }
+    div {
+      label {
+        margin: 5px 0 5px 0;
+      }
+      .input {
+        padding: 10px;
+        width: 200px;
+      }
+    }
+}
+  }
+  section {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-container {
+    margin-bottom: 22px;
+  }
+}
