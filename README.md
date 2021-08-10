@@ -4,6 +4,8 @@ position your terminal in the server folder that is inside the aeromexico folder
 
 and run the following command  json-server --watch db.json --port 3004
 
+Open [http://localhost:3004/students](http://localhost:3004/students) to view it in the browser.
+
 ## Run the project
 
 In the project directory, you can run:
